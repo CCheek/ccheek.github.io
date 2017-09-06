@@ -24,3 +24,28 @@ Event.observe(window, 'load', function() {
 	window.addEventListener('keydown',handleKeyDown,true); 
 	window.addEventListener('keyup',handleKeyUp,true);
 });
+function initGame(){
+	// create 2 big platforms	
+	createBox(world, 3, 230, 60, 180, true, 'ground');
+	createBox(world, 560, 360, 50, 50, true, 'ground');
+	
+	// create small platforms
+	for (var i = 0; i < 5; i++){
+		createBox(world, 150+(80*i), 360, 5, 40+(i*15), true, 'ground');	
+	}
+	
+	// create player ball
+	var ballSd = new b2CircleDef();
+	ballSd.density = 0.1;
+	ballSd.radius = 12;
+	ballSd.restitution = 0.5;
+	ballSd.friction = 1;
+	ballSd.userData = 'player';
+	var ballBd = new b2BodyDef();
+	ballBd.linearDamping = .03;
+	ballBd.allowSleep = false;
+	ballBd.AddShape(ballSd);
+	ballBd.position.Set(20,0);
+	player.object = world.CreateBody(ballBd);
+	
+}
