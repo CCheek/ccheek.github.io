@@ -1,0 +1,14 @@
+canvas {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				/*background: transparent;*/
+				background-color: blue;
+			}
+      header {
+        background-color: black;
+      }
+      header.h1 {
+        color: white;
+        
+      }
