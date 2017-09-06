@@ -1,0 +1,27 @@
+canvas {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	/*background: transparent;*/
+	background-color: blue;
+}
+header {
+	background-color: black;
+}
+header.h1 {
+	color: white;
+}
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    width: 400px;
+    height: 250px;
+    background-color: lightgrey;
+}
+
+.flex-item {
+    background-color: cornflowerblue;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
