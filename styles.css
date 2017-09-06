@@ -14,30 +14,30 @@ header.h1 {
 	color: white;
 }
 .flex-container {
-    display: -webkit-flex;
-    display: flex;
-    width: 400px;
-    height: 250px;
-    background: transparent;
+	display: -webkit-flex;
+	display: flex;
+	width: 400px;
+	height: 250px;
+	background: transparent;
 	float: left;
-    margin: 0 0 10px 10px
+	margin: 0 0 10px 10px
 }
 
 .flex-item {
-    background: transparent;
-    width: 100px;
-    height: 100px;
-    margin: 10px;
+	background: transparent;
+	width: 100px;
+	height: 100px;
+	margin: 10px;
 }
 a:link, a:visited {
-    background-color: #66ff66;
-    color: white;
-    padding: 14px 25px;
-    text-align: center; 
-    text-decoration: none;
-    display: inline-block;
+	background-color: green;
+	color: white;
+	padding: 14px 25px;
+	text-align: center; 
+	text-decoration: none;
+	display: inline-block;
 }
 
 a:hover, a:active {
-    background-color: #33cc33;
+	background-color: dark-green;
 }
