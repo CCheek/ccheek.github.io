@@ -1,9 +1,12 @@
 canvas {
-	position: absolute;
+	position: relative;
 	top: 0px;
 	left: 0px;
 	/*background: transparent;*/
 	background-color: blue;
+}
+body {
+    direction: rtl;
 }
 header {
 	background-color: black;
@@ -20,7 +23,7 @@ header.h1 {
 }
 
 .flex-item {
-    background-color: cornflowerblue;
+    background: transparent;
     width: 100px;
     height: 100px;
     margin: 10px;
