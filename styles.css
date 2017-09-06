@@ -1,9 +1,8 @@
 canvas {
-	position: relative;
+	/*position: relative;
 	top: 0px;
-	left: 0px;
-	/*background: transparent;*/
-	background-color: blue;
+	left: 0px;*/
+	background: transparent;
 }
 body {
     direction: rtl;
@@ -20,6 +19,8 @@ header.h1 {
     width: 400px;
     height: 250px;
     background-color: lightgrey;
+	float: left;
+    margin: 0 0 10px 10px
 }
 
 .flex-item {
