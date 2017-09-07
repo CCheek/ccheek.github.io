@@ -41,8 +41,3 @@ a:link, a:visited {
 a:hover, a:active {
 	background-color: dark-green;
 }
-
-.button {
-	background-color: black;
-	color: white;
-}
