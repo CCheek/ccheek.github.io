@@ -10,9 +10,6 @@ body {
 header {
 	background-color: black;
 }
-header.h1 {
-	color: white;
-}
 .flex-container {
 	display: -webkit-flex;
 	display: flex;
