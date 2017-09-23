@@ -38,3 +38,73 @@ a:link, a:visited {
 a:hover, a:active {
 	background-color: dark-green;
 }
+.container {
+  max-width:1000px;
+  margin:0 auto;
+  text-align:center;
+}
+
+.pricingbuttons {
+  width:100%;
+  clear:both;
+  margin:50px 0;
+}
+
+.btncontainer {
+  display:inline-block;
+}
+
+.pricingbtn {
+  background:transparent;
+  display:inline-block;
+  padding:20px 60px;
+  border-radius:14px;
+  color:#545454;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-family:Arial;
+  margin:0 20px;
+  border:2px solid orange;
+}
+
+.pricingbtn.active {
+  background:orange;
+  color:#fff;
+}
+
+
+.pricingtable {
+  margin:30px 0;
+  background:#ededed;
+  display:block;
+  color:#545454;
+  font-size:75px;
+  padding:10px 50px;
+}
+
+.enterprisepricing {
+  margin:30px 0;
+  background:#ededed;
+  display:block;
+  color:#545454;
+  font-size:35px;
+  padding:10px 50px;
+  display:none;
+}
+
+.employeenoinfo {
+  display:block;
+  margin:15px 0;
+}
+
+.employeenocont {
+  border:1px solid gray;
+  display: inline-block;
+  text-align:right;
+  padding:10px 5px;
+  min-width:150px;
+}
+
+.employeenotextcont {
+  display:inline-block;;
+}
