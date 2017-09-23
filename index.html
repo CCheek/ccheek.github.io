@@ -5,6 +5,22 @@
 		<link rel="stylesheet" href="styles.css">		
 		<script src='js/box2dutils.js'></script> 
 	   	<script src='js/game.js'></script>
+		<script src="jquery.min.js"></script>
+		<script src="rangeslider.min.js"></script>
+		<script>
+			// Initialize a new plugin instance for all
+			// e.g. $('input[type="range"]') elements.
+			$('input[type="range"]').rangeslider();
+
+			// Destroy all plugin instances created from the
+			// e.g. $('input[type="range"]') elements.
+			$('input[type="range"]').rangeslider('destroy');
+
+			// Update all rangeslider instances for all
+			// e.g. $('input[type="range"]') elements.
+			// Usefull if you changed some attributes e.g. `min` or `max` etc.
+			$('input[type="range"]').rangeslider('update', true);
+		</script>
 	</head>
 	<body>
     	<header>
@@ -12,24 +28,17 @@
     	</header>
     	<main>
 			<div class="flex-container">
-				<script href="/js/priceslider"></script>
-				<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
-				<div class="container">
-					<div class="pricingbuttons">
-					  <div class="m2mbtncontainer btncontainer"><a href="#" class="m2mbtn pricingbtn active">Month To Month</a><p>$<span id="priceperuserm2m">129</span> per user per month</p></div><div class="annualbtncontainer btncontainer"><a href="#" class="annualbtn pricingbtn">Annual</a><p>$<span id="priceperuserannual">99</span> per user per month</p></div>
-					</div>
-					<div class="priceslider"></div>
-					<div class="employeenoinfo">
-					  		<div class="employeenocont">1</div>
-					  		<div class="employeenotextcont">= Employees</div></div>
-								<div class="pricingtable">
-					  					$258/mo
-									</div>
-									<div class="enterprisepricing">Check out our enterprise pricing</div>
-									</div>
-									<img class="flex-item" src="https://cdn.dribbble.com/users/783/screenshots/104300/shot_1295820312.gif" alt="HTML5 Icon" width="128" height="128">
-									<br>
+				<img class="flex-item" src="https://cdn.dribbble.com/users/783/screenshots/104300/shot_1295820312.gif" alt="HTML5 Icon" width="128" height="128">
+				<br>
 				<a class="flex-item button" href="https://github.com/CCheek/CCheek.github.io" target="_blank">Fork me on Github!</a>
+				<input
+					type="range"
+					min="10"                    // default 0
+					max="1000"                  // default 100
+					step="10"                   // default 1
+					value="300"                 // default min + (max-min)/2
+					data-orientation="vertical" // default horizonal
+				>
 			</div>
     	</main>
     	<footer>
