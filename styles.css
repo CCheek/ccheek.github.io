@@ -9,7 +9,7 @@ body {
 	allign: left;
 }
 header {
-	background-color: black;
+	background-color: blue;
 }
 .flex-container {
 	display: -webkit-flex;
