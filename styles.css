@@ -1,110 +1,208 @@
-canvas {
-	/*position: relative;
-	top: 0px;
-	left: 0px;*/
-	background-color: lightgrey;
-}
-body {
-}
-header {
-	background-color: blue;
-}
-.flex-container {
-	display: -webkit-flex;
-	display: flex;
-	width: 400px;
-	height: 250px;
-	background: transparent;
-	float: left;
-	margin: 0 0 10px 10px
+/* ::::::::::::::::::::Pricing Slider::::::::::::::::::::::::: */
+table,
+th,
+td {
+  border: none !important;
+  font-size: 17px;
 }
 
-.flex-item {
-	background: transparent;
-	width: 100px;
-	height: 100px;
-	margin: 10px;
-}
-a:link, a:visited {
-	background-color: green;
-	color: white;
-	padding: 14px 25px;
-	text-align: center; 
-	text-decoration: none;
-	display: inline-block;
+th {
+  background-color: #fafafa !important;
 }
 
-a:hover, a:active {
-	background-color: dark-green;
-}
-.container {
-  max-width:1000px;
-  margin:0 auto;
-  text-align:center;
-}
-#slider_count {
-  margin:0px auto;
-  width:200px;
-  padding:20px 20px;
-  text-align:center;
-  background-color:blue;
-}
-
-/* ::::::::::::::::::::Range Slider Styles::::::::::::::::::::::::: */
 .range-slider-block {
-  margin:0px auto;
-  width:90%;
-  }
+  margin: 0px auto;
+  width: 100%;
+}
+
 #range-slider {
-  padding:40px 0px;
-  width:100%;
-  /*outline: 1px solid green;*/
+  display: inline-block;
+  padding: 40px 0 40px 0;
+  width: 100%;
+  font-size: 0;
 }
+
 /* Remove Range Sliders Default Styles*/
-input[type=range]{
-    -webkit-appearance: none;
+input[type="range"] {
+  -webkit-appearance: none;
+  background: transparent;
 }
+
 /* Track */
-input[type=range]::-webkit-slider-runnable-track {
-    height: 10px;
-    background: #d7d7d7;
-    border: none;
-    border-radius: 6px;
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 10px;
+  background: #d7d7d7;
+  border: none;
+  border-radius: 6px;
 }
-input[type=range]:focus {
-    outline: none;
+
+input[type="range"]:focus {
+  outline: none;
 }
+
 /* Thumb */
-input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    border: none;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    background: #46947F;
-    margin-top: -9px;
-    transition: box-shadow 0.5s;
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #d17a1d;
+  margin-top: -9px;
+  transition: box-shadow 0.5s;
 }
-input[type=range]:hover::-webkit-slider-thumb {
-    box-shadow: 0 0 0 10pt rgba(190,190,190,0.4);
-    cursor:pointer;
+
+input[type="range"]:hover::-webkit-slider-thumb {
+  box-shadow: 0 0 0 10pt rgba(190, 190, 190, 0.4);
+  cursor: pointer;
 }
 
 /* JS Stykes */
-/* Changes Thumb color to darker green when mousedownn */
-input[type=range].thumb-down::-webkit-slider-thumb {
-  background:#316557;
+input[type="range"].thumb-down::-webkit-slider-thumb {
+  background: #d17a1d;
 }
-/* Changes Thumb color back to light green when mouseup */
-input[type=range].thumb-up::-webkit-slider-thumb {
-  background:#46947F;  
+
+input[type="range"].thumb-up::-webkit-slider-thumb {
+  background: #d17a1d;
 }
-/* Changes Ring color Green */
-input[type=range].hover-ring::-webkit-slider-thumb {
-    box-shadow: 0 0 0 6pt rgba(70,148,127,0.46);
-    cursor:pointer;
+
+input[type="range"].hover-ring::-webkit-slider-thumb {
+  box-shadow: 0 0 0 6pt rgba(209, 122, 29, 0.46);
+  cursor: pointer;
 }
-input[type=range].hover-ring-out::-webkit-slider-thumb {
-    box-shadow: 0 0 0 0pt rgba(0,0,0,0);
-    cursor:pointer;
+
+input[type="range"].hover-ring-out::-webkit-slider-thumb {
+  box-shadow: 0 0 0 0pt rgba(0, 0, 0, 0);
+  cursor: pointer;
 }
+
+/* The Callout */
+.callout {
+  display: inline-block;
+  position: relative;
+  width: min-content;
+  color: #fafafa;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 3px;
+  background: #1a1817;
+  padding: 5px 10px;
+  margin-left: 8px;
+}
+.callout:after {
+  position: absolute;
+  top: 8px;
+  left: -7px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-right: 7px solid #1a1817;
+  border-bottom: 7px solid transparent;
+  content: "";
+}
+
+/* Formatting */
+.costCell {
+  text-align: right;
+  margin: 0px auto;
+  width: 18%;
+  padding: 20px 20px;
+}
+
+/* Button/Switch */
+.tgl {
+  display: none;
+}
+.tgl,
+.tgl:after,
+.tgl:before,
+.tgl *,
+.tgl *:after,
+.tgl *:before,
+.tgl + .tgl-btn {
+  box-sizing: border-box;
+}
+.tgl::selection,
+.tgl:after::selection,
+.tgl:before::selection,
+.tgl *::selection,
+.tgl *:after::selection,
+.tgl *:before::selection,
+.tgl + .tgl-btn::selection {
+  background: none;
+}
+.tgl + .tgl-btn {
+  outline: 0;
+  display: inline-block;
+  width: 4em;
+  height: 2em;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+.tgl + .tgl-btn:after,
+.tgl + .tgl-btn:before {
+  position: relative;
+  display: block;
+  width: 50%;
+  height: 100%;
+  content: "\2060";
+}
+.tgl + .tgl-btn:after {
+  left: 0;
+}
+.tgl + .tgl-btn:before {
+  display: none;
+}
+.tgl:checked + .tgl-btn:after {
+  left: 50%;
+}
+
+.tgl-ios + .tgl-btn {
+  background: #d4d1cd;
+  border-radius: 2em;
+  padding: 2px;
+  transition: all 0.4s ease;
+  border: 1px solid #e8eae9;
+}
+.tgl-ios + .tgl-btn:after {
+  border-radius: 2em;
+  background: #fbfbfb;
+  transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    padding 0.3s ease, margin 0.3s ease;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.08);
+}
+.tgl-ios + .tgl-btn:hover:after {
+  will-change: padding;
+}
+.tgl-ios + .tgl-btn:active {
+  box-shadow: inset 0 0 0 2em #e8eae9;
+}
+.tgl-ios + .tgl-btn:active:after {
+  padding-right: 0.8em;
+}
+.tgl-ios:checked + .tgl-btn {
+  background: #d17a1d;
+}
+.tgl-ios:checked + .tgl-btn:active {
+  box-shadow: none;
+}
+.tgl-ios:checked + .tgl-btn:active:after {
+  margin-left: -0.8em;
+}
+
+label {
+  cursor: pointer;
+}
+
+.totalBox {
+  font-size: 21px;
+  text-align: center;
+  border-radius: 2px;
+  padding: 10px 20px 10px 20px;
+  background-color: #d4d1cd;
+  width: 30;
+  float: right;
+}
+
