@@ -11,3 +11,7 @@ Main Body code (when included) comes from a project I worked on for [Zevo](https
 Template for website comes from [OS Templates]
 
 [OS Templates]: http://www.os-templates.com/
+
+Project Dump Index style sheet comes from [CSS Zen Garden] and [Dan Mall]
+
+[CSS Zen Garden]: http://www.csszengarden.com/220/220.css [Dan Mall]: http://danmall.me
